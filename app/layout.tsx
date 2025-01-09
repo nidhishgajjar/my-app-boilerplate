@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Lato } from 'next/font/google'
 import { NextUIProvider } from '@nextui-org/react';
-import { ClerkProvider, ClerkLoaded, SignedIn, ClerkLoading } from '@clerk/nextjs';
+import { ClerkProvider, ClerkLoaded, SignedIn, ClerkLoading, SignedOut } from '@clerk/nextjs';
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react"
 import Header from "@/components/Header";
-import AuthWrapper from "@/components/AuthWrapper";
 
 export const metadata: Metadata = {
   title: "Boilerplate",
@@ -43,14 +42,16 @@ export default function RootLayout({
           </div>
           </ClerkLoading>
           <ClerkLoaded>
-            <AuthWrapper>
               <NextUIProvider>
-                <Header />
                 <SignedIn>
-                <main>{children}</main>
+                <Header />
+
+                    <main>{children}</main>
                 </SignedIn>
+                <SignedOut>
+                  {children}
+                </SignedOut>
               </NextUIProvider>
-            </AuthWrapper>
           </ClerkLoaded>
         </body>
       </ClerkProvider>
