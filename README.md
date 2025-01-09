@@ -1,6 +1,5 @@
 # Boilerplate
 
-## Description
 Boilerplate Next.js project with Clerk, Shacdcn, NextUI, Supabase setup
 
 ## Prerequisites
