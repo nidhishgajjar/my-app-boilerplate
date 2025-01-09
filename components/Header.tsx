@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { SignedIn, UserButton, useUser, useClerk } from '@clerk/nextjs';
+import { UserButton, useUser, useClerk } from '@clerk/nextjs';
 
 export default function Header() {
   const searchParams = useSearchParams();
@@ -44,10 +44,8 @@ export default function Header() {
       <nav className="w-full flex justify-center border-b border-b-foreground/10 h-16">
         <div className="w-full max-w-4xl flex justify-between items-center p-3 text-sm">
           {/* <Logo /> */}
-          <h1 className="font-light text-md tracking-wide">my app</h1>
-          <SignedIn>
+          <h1 className="font-medium text-xl tracking-wide">my app</h1>
             <UserButton />
-          </SignedIn>
         </div>
       </nav>
     </div>
