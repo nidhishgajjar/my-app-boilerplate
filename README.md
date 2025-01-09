@@ -1,6 +1,6 @@
 # Boilerplate
 
-Boilerplate Next.js project with Clerk, Shacdcn, NextUI, Supabase setup
+Boilerplate project with Next.js + TailwindCSS + Typescript + Clerk + Shadcn/UI + Supabase + Firebase
 
 ## Prerequisites
 - Node.js (Latest LTS version recommended)
